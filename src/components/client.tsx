@@ -3,7 +3,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import p5 from 'p5';
-import { Vector, Flock, Boid } from '../app/test/script';
+import { Vector, Flock, Boid } from './script';
 
 export default function ClientComponent() {
   const containerRef = useRef<HTMLDivElement>(null);
