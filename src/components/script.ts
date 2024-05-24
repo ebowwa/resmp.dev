@@ -1,3 +1,4 @@
+"use client"
 import p5 from 'p5';
 
 export class Vector {
