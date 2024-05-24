@@ -1,7 +1,7 @@
 // app/head.tsx
-const title = 'Simulation Guide'
-const url = 'https://simulationguide.vercel.app/'
-const description = 'by ebowwa'
+const title = 'RESMP'
+const url = 'https://resmp-dev.vercel.app/'
+const description = 'We are creating a new kind of foundation model based on nature-inspired intelligence.'
 const author = 'Elijah Arbee'
 const twitter = '@innitEbowwa'
 
@@ -48,7 +48,7 @@ export default function Head() {
         <meta name="HandheldFriendly" content="true"/>  */}
       <meta name='viewport' content='width=device-width, minimum-scale=1, initial-scale=1.0' />
       <meta name='theme-color' content='#000' />
-      <link rel='shortcut icon' href='/icons/apple-touch-icon.png' />
+      <link rel='shortcut icon' href='/RESMP-DEV-5-23-2024 (1).png' />
 
       {/* 
       Twitter Summary card
