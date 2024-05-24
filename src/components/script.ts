@@ -156,8 +156,8 @@ export class Boid {
   render(p5: p5) {
     let theta = this.velocity.heading() + p5.radians(90);
     if (this.boidCounter === 1) {
-      p5.fill("#BC002D");
-      p5.stroke("#BC002D");
+      p5.fill("#63bb00");
+      p5.stroke("#63bb00");
     } else {
       p5.fill(168, 96);
       p5.stroke(168, 96);

@@ -24,8 +24,8 @@ export default function ClientComponent() {
           canvas.position(0, 0);
           // Set the canvas z-index to -1 to place it behind other elements
           canvas.style('z-index', '-1');
-          // Set the background color to white
-          p5.background('#fff');
+          // Set the background color to a dark shade
+          p5.background('#1a1a1a');
 
           // Create a new Flock instance
           flock = new Flock(p5);
@@ -48,8 +48,8 @@ export default function ClientComponent() {
 
         // Draw function, called on each frame
         p5.draw = () => {
-          // Set the background color to white
-          p5.background('#fff');
+          // Set the background color to a dark shade
+          p5.background('#1a1a1a');
           // Run the flock simulation
           flock.run(p5);
         };
@@ -58,8 +58,8 @@ export default function ClientComponent() {
         p5.windowResized = () => {
           // Resize the canvas to fit the new window size
           p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
-          // Set the background color to white
-          p5.background('#fff');
+          // Set the background color to a dark shade
+          p5.background('#1a1a1a');
         };
 
         // Handle mouse dragging

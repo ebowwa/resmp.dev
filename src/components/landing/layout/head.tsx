@@ -48,7 +48,7 @@ export default function Head() {
         <meta name="HandheldFriendly" content="true"/>  */}
       <meta name='viewport' content='width=device-width, minimum-scale=1, initial-scale=1.0' />
       <meta name='theme-color' content='#000' />
-      <link rel='shortcut icon' href='/RESMP-DEV-5-23-2024 (1).png' />
+      <link rel='shortcut icon' href='/icons/apple-touch-icon.png' />
 
       {/* 
       Twitter Summary card

@@ -1,6 +1,6 @@
 // src/app/FlockingSimulation.ts
 import p5 from 'p5';
-import { Boid } from '../boids/Boid';
+import { Boid } from '../Boid';
 
 export class FlockingSimulation {
   private p: p5; // Reference to the p5.js instance

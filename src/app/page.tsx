@@ -5,11 +5,12 @@ import { useState, useEffect } from 'react'
 import TextOverlay from './TextOverlay'
 import Link from 'next/link'
 import Image from 'next/image'
-import dynamic from 'next/dynamic';
+import dynamic from 'next/dynamic'
 
 const ClientComponent = dynamic(() => import('@/components/client'), {
   ssr: false,
-});
+})
+
 export default function BoidsPage() {
   const [showImage, setShowImage] = useState(true)
 
@@ -28,10 +29,20 @@ export default function BoidsPage() {
         <div style={{ position: 'absolute', top: '50px', left: '40px', width: '50%', height: 'auto', zIndex: 3 }}>
           <Image
             src="/RESMP-DEV-5-23-2024 (1).png"
-            alt="/RESMP-DEV-5-23-2024 (1).png"
+            alt="RESMP-DEV-5-23-2024 (1).png"
             width={1920}
             height={1080}
             layout="responsive"
+            // New in Next.js 14
+            overrideSrc="/RESMP-DEV-5-23-2024 (1).png"
+            // New in Next.js 14
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=="
+            // New in Next.js 14
+            ref={(img) => {
+              // Access the underlying <img> element
+              console.log(img)
+            }}
           />
         </div>
       )}

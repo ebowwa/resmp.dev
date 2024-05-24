@@ -2,6 +2,7 @@
 import { Layout } from '@/components/landing/layout/dom/Layout';
 import Head from '../components/landing/layout/head';
 import '@/styles/global.css';
+import { ThemeProvider } from 'next-themes';
 
 export const metadata = {
   title: 'Ebowwa',
@@ -20,8 +21,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       */}
       <Head />
       <body>
-        {/* To avoid FOUT with styled-components wrap Layout with StyledComponentsRegistry https://beta.nextjs.org/docs/styling/css-in-js#styled-components */}
-        <Layout>{children}</Layout>
+        {/* Wrap the Layout with the ThemeProvider and set the default theme to 'dark' */}
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <Layout>{children}</Layout>
+        </ThemeProvider>
       </body>
     </html>
   );
@@ -35,6 +38,5 @@ function registerWebWorker(url: string) {
     });
   }
 }
-
 // add ip tracker 
 // add src/hooks/useDeviceDetection.ts
