@@ -6,7 +6,9 @@
         "src/app/*",
         "src/*",
         "./src/*",
-        "@/*.ts"
+        "@/*.ts",
+        "@/*.js",
+        "@/*.jsx"
       ],
       "@public/*": [
         "public/*"
@@ -44,9 +46,12 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
     ".next/types/**/*.ts",
     "."
-, "(broken)"  ],
-  "exclude": ["node_modules"]
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
-

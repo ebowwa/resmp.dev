@@ -14,7 +14,7 @@ const Container = ({ children }: Props) => {
     <div suppressHydrationWarning>
       
         <div className="min-h-screen">
-        <Alert preview={true} />
+        <Alert />
         {children}
       </div>
     </div>

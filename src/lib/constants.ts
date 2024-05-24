@@ -20,5 +20,5 @@ export const route = {
 };
 
 export const EXAMPLE_PATH = "GOLDSONCO";
-export const CMS_NAME = "ebowwa";
+export const CMS_NAME = "kearm";
 

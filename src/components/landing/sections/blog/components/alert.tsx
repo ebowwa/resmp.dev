@@ -2,63 +2,34 @@ import Container from "./og_container";
 import cn from "classnames";
 
 type AlertContent = {
-  default: {
-    message: string;
-    linkText: string;
-    linkHref: string;
-  };
-  preview: {
-    message: string;
-    linkText: string;
-    linkHref: string;
-  };
+  message: string;
+  linkText: string;
+  linkHref: string;
 };
 
 const alertContent: AlertContent = {
-  default: {
-    message: "This page is a preview.",
-    linkText: "Click here",
-    linkHref: "/api/exit-preview",
-  },
-  preview: {
-    message: "Check out our lawn care services!",
-    linkText: "Sign up today",
-    linkHref: "/",
-  },
+  message: "Discover the power of nature-inspired AI for your business.",
+  linkText: "Learn More",
+  linkHref: "/contact",
 };
 
-type Props = {
-  preview?: boolean;
-};
-
-const Alert = ({ preview }: Props) => {
-  const { message, linkText, linkHref } = preview
-    ? alertContent.preview
-    : alertContent.default;
-
+const Alert = () => {
   return (
     <div
-      className={cn("border-b", {
-        "bg-green-100 border-green-200 text-green-900": preview,
-        "bg-neutral-50 border-neutral-200": !preview,
-      })}
+      className={cn("border-b bg-[#6231f0] border-[#6231f0] text-white")}
     >
       <Container>
         <div className="py-3 text-center">
-          <span className="text-sm font-medium">{message}</span>{" "}
+          <span className="text-sm font-medium">{alertContent.message}</span>{" "}
           <a
-            href={linkHref}
+            href={alertContent.linkHref}
             className={cn(
-              "text-sm font-semibold underline duration-200 transition-colors",
-              {
-                "hover:text-green-700": preview,
-                "hover:text-blue-600": !preview,
-              }
-            )}
+              "text-sm font-semibold underline duration-200 transition-colors hover:bg-gradient-to-r from-[#6231f0]/60 via-[#8e44ad]/60 to-[#9b59b6]/60 hover:text-white"
+               )}
           >
-            {linkText}
+            {alertContent.linkText}
           </a>
-          {!preview && "."}
+          .
         </div>
       </Container>
     </div>
